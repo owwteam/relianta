@@ -1,17 +1,27 @@
 section.footer
   .container
     .footer__card
-      .footer__head 
-        h2 
-          | A Life of
-          span 
-          | Boundless Creativity
+      .footer__head
+        .footer__title
+          h2 Stay Connected to What’s Next in Data & Finance
+          form.form-footer(action="" method="post")
+            input.form-footer__input(type="email" placeholder="name@email.com" required)
+            button.btn(type="submit").btn-submit 
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M8.57141 3.42843L3.42855 8.57129" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8.57141 8.50732V3.42875H3.49284" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
         .footer__menu 
-          a(href="") Home
-          a(href="") Insight
-      .footer__body
-        p His work reminds us that the future belongs to those who imagine boldly and build fearlessly.
-        a(href="").btn Lets talk!
+          a(href="#") Home
+          a(href="#") Services
+          a(href="#") Solutions
+          a(href="#") Company
+      .footer__bottom
+        h2 RELIANTA
+          span ®
   .container
-    a(href="") Privacy Policy/Terms
-    p All rights reserved ©BAREBONES 2025
+    p ©2025 relianta, All rights reserved
+    .menus__allright
+      a(href="") Talk to Solutions Engineering
+      a(href="") Request Sandbox Access
+    

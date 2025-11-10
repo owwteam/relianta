@@ -1,14 +1,14 @@
 @use 'mixins';
+@use 'base' as *;
 
-.navbar{
+.navbar {
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   padding-block: 24px;
-  border-bottom: 1px solid rgba(255,255,255, 0.2);
-  z-index: 9;
-  transform: translateY(0%);
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  z-index: 999;
   transition: all 300ms ease;
 
   &.hidden {
@@ -23,38 +23,164 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding-block: 12px;
 
-    .navbar__menu a{
-      color: black;
+    .navbar__menu a {
+      color: $black;
     }
   }
 
-  .container{
+  .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
-  &__menu{
+  &__menu {
     display: flex;
-    gap: 24px;
     align-items: center;
-
-    a{
-      text-decoration: none;
-      color: white;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 100%;
-      letter-spacing: -0.16px;
-
-      &{
-        @include mixins.font('secondary');
-      }
-
+    gap: 24px;
+    width: 100%;
+    justify-content: space-between;
+    .navbar__links--wrap{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 24px;
+      margin-left: auto;
+      margin-right: auto;
       @include mixins.respond(md) {
-        font-size: 14px;
+        flex-direction: column;
+      }
+      a {
+        text-decoration: none;
+        color: $white-60;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: -0.16px;
+        text-transform: uppercase;
+        &:hover {
+          color: $white;
+        }
+        @include mixins.font('secondary');
+  
+        @include mixins.respond(md) {
+          font-size: 14px;
+        }
       }
     }
+
+
+    @include mixins.respond(md) {
+      position: fixed;
+      inset: 0;
+      background: black;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+      z-index: 998;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .btn {
+        margin-top: 16px;
+      }
+    }
+  }
+
+  &__toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+
+    span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: white;
+      transition: all 0.3s ease;
+    }
+
+    @include mixins.respond(md) {
+      display: flex;
+    }
+
+
+    &.active span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+    &.active span:nth-child(2) {
+      opacity: 0;
+    }
+    &.active span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+
+
+  @include mixins.respond(md) {
+    .navbar__menu {
+      display: none;
+    }
+
+    &__menu.active {
+      display: flex;
+    }
+    .navbar__logo {
+      z-index: 999;
+    }
+  }
+}
+
+.navbar--light {
+  .navbar__menu a {
+    color: $white-60;
+    &:hover {
+      color: $white;
+    }
+    @include mixins.respond(md) {
+      color: $white-60;
+    }
+  }
+  a.btn{
+    background: $white;
+    color: $black;
+  }
+
+}
+
+.navbar--dark {
+  .navbar__menu a {
+    color: $black;
+    &:hover {
+      color: $white;
+    }
+    @include mixins.respond(md) {
+      color: $white-60;
+    }
+  }
+  a.btn{
+    background: $black;
+    color: $white;
+    @include mixins.respond(md) {
+      color: $black;
+      background: $white;
+    }
+  }
+}
+
+.navbar--dark.show {
+  a.btn{
+    background: $black;
+    color: $white;
   }
 }

@@ -3,7 +3,7 @@ html
   head
     meta(charset="UTF-8")
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    title Barebone Modular HTML
+    title Relianta
     link(rel="stylesheet", href="style.css")
     link(rel="icon", type="image/png", href="/assets/images/hero_icon.webp")
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,12 @@ html
     <link href="https://api.fontshare.com/v2/css?f[]=general-sans@1&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   body
+    //variant: light | dark navbar
+    - var theme = 'light'
     include parts/navbar.pug
+
     include parts/hero.pug
+    include parts/running_text.pug
     include parts/footer.pug
 
     script(src="https://unpkg.com/aos@2.3.1/dist/aos.js")
