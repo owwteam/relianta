@@ -1,0 +1,91 @@
+@use 'mixins';
+@use 'base' as *;
+
+.running-text {
+  background: $black;
+  padding-block: 24px;
+  overflow: hidden;
+
+  .container {
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 24px;
+    max-width: 100%;
+  }
+
+  @include mixins.respond(lg) {
+    gap: 18px;
+  }
+
+  @include mixins.respond(md) {
+    gap: 12px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    width: fit-content;
+    
+    animation: running-xl 30s linear infinite;
+
+    @include mixins.respond(lg) {
+      animation: running-lg 30s linear infinite;
+      gap: 18px;
+    }
+
+    @include mixins.respond(md) {
+      animation: running-md 30s linear infinite;
+      gap: 12px;
+    }
+
+  }
+
+  &__item {
+    font-size: 68px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -1.36px;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mixins.respond(md) {
+      font-size: 32px;
+      letter-spacing: -1px;
+    }
+  }
+
+  .dot {
+    width: 24px;
+    height: 24px;
+    background-color: #458781;
+    flex-shrink: 0;
+    background: url('../assets/images/icon_running.svg') no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  @keyframes running-xl {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(calc(-200% - 80px)); }
+  }
+
+  @keyframes running-lg {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(calc(-200% - 40px)); }
+  }
+
+  @keyframes running-md {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(calc(-200% - 20px)); }
+  }
+}

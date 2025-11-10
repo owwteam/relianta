@@ -28,3 +28,18 @@ window.addEventListener("scroll", () => {
 
 	lastScrollY = currentScrollY;
 });
+
+const navToggle = document.querySelector(".navbar__toggle");
+const navMenu = document.querySelector(".navbar__menu");
+
+navToggle.addEventListener("click", () => {
+	const isActive = navToggle.classList.toggle("active");
+	navMenu.classList.toggle("active");
+	navbar.classList.remove("show", "hidden");
+
+	if (isActive) {
+		document.body.style.overflow = "hidden";
+	} else {
+		document.body.style.overflow = "";
+	}
+});

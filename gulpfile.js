@@ -43,13 +43,21 @@ function processJS() {
 }
 
 // 🖼️ Optimize Images (pakai dynamic import async-safe)
-async function optimizeImages() {
-  const imagemin = (await import("gulp-imagemin")).default;
+// async function optimizeImages() {
+//   const imagemin = (await import("gulp-imagemin")).default;
+//   return src(paths.images)
+//     .pipe(imagemin())
+//     .pipe(dest("dist/assets/images"))
+//     .pipe(browserSync.stream());
+// }
+
+// 🖼️ Copy Images tanpa kompres
+function optimizeImages() {
   return src(paths.images)
-    .pipe(imagemin())
     .pipe(dest("dist/assets/images"))
     .pipe(browserSync.stream());
 }
+
 
 // 🔤 Copy Fonts
 function copyFonts() {
