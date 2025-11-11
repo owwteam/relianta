@@ -4,7 +4,9 @@
 .footer{
   background: linear-gradient(180deg, #020609 0%, #234441 100%);
   padding-top: 108px;
-
+  @include mixins.respond(md) {
+    padding-top: 80px;
+  }
   .container:nth-child(1){
     padding-inline: 32px;
 
@@ -165,21 +167,40 @@
       line-height: 0.85;
       font-family: 'Thunder LC';
       display: flex;
+      @include mixins.respond(xl) {
+        font-size: 280px;
+      }
+      @include mixins.respond(md) {
+        font-size: 180px;
+      }
+      @include mixins.respond(sm) {
+        font-size: 140px;
+      }
       span{
         color: #FFF;
         font-family: 'Thunder LC';
         font-size: 187px;
         font-style: normal;
         font-weight: 500;
-        line-height: 120%; /* 224.4px */
+        line-height: 120%;
         letter-spacing: -7.48px;
         text-transform: uppercase;
-      }
-
-      @include mixins.respond(md) {
-        font-size: 24px;
-        letter-spacing: -1px;
+        @include mixins.respond(md) {
+          font-size: 140px;
+        }
+        @include mixins.respond(sm) {
+          font-size: 80px;
+        }
       }
     }
   }
+  // .layout-line{
+  //   background-image: url('../assets/images/line_ornament.svg');
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   background-size: cover;
+  //   max-width: 1440px;
+  //   width: 100%;
+  //   margin: auto;
+  // }
 }
