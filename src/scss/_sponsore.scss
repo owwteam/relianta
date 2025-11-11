@@ -1,0 +1,31 @@
+@use 'mixins';
+@use 'base' as *;
+
+section.sponsore{
+    .container.sponsore__container{
+        padding: 40px ;
+        background-color: $black ;
+        @include mixins.respond(md) {
+            padding: 40px 10px;
+        }
+        .sponsore__logos{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include mixins.respond(md) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 24px;
+            }
+            .sponsore__logo{
+                width: 189px;
+                height: 48px;
+                aspect-ratio: 63/16;
+                @include mixins.respond(md) {
+                    width: 180px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+}

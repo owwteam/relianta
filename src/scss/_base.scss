@@ -21,8 +21,8 @@ $white-60: rgba(255, 255, 255, 0.60);
 
 body {
   font-family: sans-serif;
-  background: $white;
-  color: black;
+  background: $black;
+  color: $black;
   h1, h2, h3, h4 {
     margin: unset;
   }
