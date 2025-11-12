@@ -4,6 +4,7 @@
 .footer{
   background: linear-gradient(180deg, #020609 0%, #234441 100%);
   padding-top: 108px;
+  position: relative;
   @include mixins.respond(md) {
     padding-top: 80px;
   }
@@ -174,7 +175,7 @@
         font-size: 180px;
       }
       @include mixins.respond(sm) {
-        font-size: 140px;
+        font-size: 120px;
       }
       span{
         color: #FFF;

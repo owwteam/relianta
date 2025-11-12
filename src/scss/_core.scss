@@ -1,0 +1,93 @@
+@use 'mixins';
+@use 'base' as *;
+
+section.core{
+    position: relative;
+    padding-top: 262px;
+    padding-bottom: 40px;
+    background-image: url("assets/images/bg-core.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    overflow: hidden;
+    background-size: cover;
+    @include mixins.respond(md) {
+        padding-top: 80px;
+        background: linear-gradient(180deg, #020609 0%, #458781 100%);
+    }
+    .container.core__container{
+        z-index: 1;
+        position: relative;
+        .core__content{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: 273px;
+            @include mixins.respond(md) {
+                gap: 80px;
+            }
+            .core__content-head{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                .core__content--title{
+                    color: #FFF;
+                    font-family: Inter;
+                    font-size: 52px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 130%; /* 67.6px */
+                    letter-spacing: -2.08px;
+                }
+                .core__img-oranment{
+                    width: 100%;
+                    margin-top: 40px;
+                }
+            }
+            .core__content-bottom{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: 1fr;
+                grid-column-gap: 16px;
+                grid-row-gap: 16px;
+                color: white;
+                @include mixins.respond(md) {
+                    grid-template-columns: repeat(1, 1fr);
+                    grid-template-rows: 1fr;
+                }
+                .card__item{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+                    padding-bottom: 16px;
+                    border-bottom: solid 1px rgba(255, 255, 255, 0.20);
+                    .card__item-head{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        h3{
+                            color: #FFF;
+                            font-family: Inter;
+                            font-size: 20px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 120%;
+                            letter-spacing: -0.8px;
+                        }
+                    }
+                    span{
+                        color: rgba(255, 255, 255, 0.80);
+                        font-family: Inter;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 160%; /* 25.6px */
+                    }
+                }
+            }
+        }
+
+    }
+}
