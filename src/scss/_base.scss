@@ -117,3 +117,60 @@ button, .btn{
   border-style: none;
   border-color: none;
 }
+.btn-black{
+  background: $black;
+  color: $white;
+}
+.btn-green{
+  border-radius: 100%;
+  background-color: rgba(69, 135, 129, 1);
+  border-style: none;
+  border-color: none;
+  display: flex;
+  padding: 11px;
+  justify-content: center;
+  align-items: center;
+  svg{
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.oranament-bg{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+}
+
+.tag-section{                
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+  img{
+      width: 24px;
+      height: 24px;
+  }
+  span{
+      color: rgba(2, 6, 9, 0.80);
+      font-feature-settings: 'liga' off, 'clig' off;
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 1.12px;
+      text-transform: uppercase;
+  }
+}
+.tag-section.white{                
+  span{
+      color: $white;
+  }
+}

@@ -1,0 +1,192 @@
+@use 'mixins';
+@use 'base' as *;
+
+section.section-whoweserve{
+    background-color: $white;
+    position: relative;
+    .whoweserve__container{
+        padding-top: 140px;
+        padding-bottom: 100px;
+        position: relative;
+        @include mixins.respond(md) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        .whoweserve__content{
+            .whoweserve__content-head{
+                display: flex;
+                align-items: flex-start;
+                flex-direction: row;
+                justify-content: space-between;
+                @include mixins.respond(md) {
+                    flex-direction: column;
+                }
+            }
+            &--span{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-top: 12px;
+                gap: 6px;
+                img{
+                    width: 24px;
+                    height: 24px;
+                }
+                span{
+                    color: rgba(2, 6, 9, 0.80);
+                    font-feature-settings: 'liga' off, 'clig' off;
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 1.12px;
+                    text-transform: uppercase;
+                }
+            }
+            &--title{
+                max-width: 900px;
+                display: flex;
+                flex-direction: column;
+                h2{
+                    color: #020609;
+                    font-family: Inter;
+                    font-size: 52px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 130%; /* 67.6px */
+                    letter-spacing: -2.08px;
+                    @include mixins.respond(md) {
+                        font-size: 32px;
+                    }
+                }
+                h2:nth-child(1){
+                    margin-left: 100px;
+                    @include mixins.respond(md) {
+                        margin-left: 0px;
+                    }
+                }
+            }
+            &--icon{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+                padding-top: 16px;
+                @include mixins.respond(md) {
+                    display: none;
+                }
+                .whoweserve-icon_head{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 12px;
+                    align-items: center;
+                    justify-content: center;
+                    img{
+                        width: 96px;
+                        height: 40px;
+                    }
+                }
+                span{
+                    color: rgba(2, 6, 9, 0.80);
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%; /* 22.4px */
+                    max-width: 207px;
+                }
+            }
+        }
+        .whoweserve__content-body{
+            margin-top: 44px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            @include mixins.respond(md) {
+                flex-direction: column;
+            }
+            .content-body_img{
+                display: flex;
+                flex-direction: column;
+                .whoserve_fotos{
+                    margin-top: 32px;
+                    margin-bottom: 24px;
+                    max-width: 443px;
+                    height: auto;
+                }
+                span{
+                    color: #020609;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%; /* 25.6px */
+                    max-width: 443px;
+                }
+            }
+            .content-body_left{
+                .whoweserve__link{
+                    cursor: pointer;
+                    width: 100%;
+                    max-width: 800px;
+                    display: grid;
+                    grid-template-columns: 0.5fr 2fr 0.5fr;
+                    grid-template-rows: 1fr;
+                    grid-column-gap: px;
+                    grid-row-gap: 0px;
+                    align-items: center;
+                    padding-block: 32px;
+                    border-bottom: solid 1px rgba(2, 6, 9, 0.12);
+                    @include mixins.respond(md) {
+                        padding-block: 20px;
+                    }
+                    > :nth-child(3) {
+                        justify-self: end;
+                    }
+                    span:nth-child(1){
+                        color: #020609;
+                        font-family: Inter;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 120%;
+                        letter-spacing: 0.96px;
+                        text-transform: uppercase;
+                    }
+                    span:nth-child(2){
+                        color: #9A9B9D;
+                        font-family: Inter;
+                        font-size: 40px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 120%;
+                        letter-spacing: -1.6px;
+                        transition: color 0.3s ease, margin-left 0.3s ease;
+                        @include mixins.respond(md) {
+                            font-size: 24px;
+                        }
+                    }
+                    svg{
+                        opacity: 0;
+                        transition: opacity 0.3s ease, transform 0.3s ease;
+                        transform: translateX(-5px); 
+                    }
+                    &:hover {
+
+                        svg {
+                            opacity: 1;
+                        }
+                    
+                        span:nth-child(2) {
+                            color: #020609;
+                            margin-left: 10px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
