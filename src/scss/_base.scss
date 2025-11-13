@@ -34,6 +34,7 @@ body {
 
 section{
   width: 100%;
+  position: relative;
 }
 
 .container{
@@ -41,6 +42,7 @@ section{
   max-width: 1440px;
   margin: auto;
   padding-inline: 40px;
+  position: relative;
 
   @include mixins.respond(lg) {
     padding-inline: 20px;

@@ -3,7 +3,7 @@
 
 .footer{
   background: linear-gradient(180deg, #020609 0%, #234441 100%);
-  padding-top: 108px;
+  padding-top: 100px;
   position: relative;
   @include mixins.respond(md) {
     padding-top: 80px;
@@ -12,12 +12,13 @@
     padding-inline: 32px;
 
     @include mixins.respond(md) {
-      padding-inline: 20px;
+      padding-inline: 10px;
     }
   }
 
   .container:nth-child(2){
-    padding-block: 32px;
+    // padding-block: 32px;
+    padding-bottom: 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,7 +67,7 @@
   &__card{
     display: flex;
     flex-direction: column;
-    gap: 148px;
+    gap: 140px;
     color: $white;
     @include mixins.respond(md) {
       gap: 82px;
@@ -77,6 +78,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-inline: 10px;
 
     @include mixins.respond(md) {
       flex-direction: column;
@@ -168,6 +170,7 @@
       line-height: 0.85;
       font-family: 'Thunder LC';
       display: flex;
+      margin-top: -40px;
       @include mixins.respond(xl) {
         font-size: 280px;
       }
@@ -177,31 +180,27 @@
       @include mixins.respond(sm) {
         font-size: 120px;
       }
-      span{
-        color: #FFF;
-        font-family: 'Thunder LC';
-        font-size: 187px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 120%;
-        letter-spacing: -7.48px;
-        text-transform: uppercase;
+      img{
+        width: 122px;
+        height: 136px;
+        flex-shrink: 0;
+        aspect-ratio: 61/68;
         @include mixins.respond(md) {
-          font-size: 140px;
+          width: 100px;
+          height: auto;
+          flex-shrink: 0;
+          aspect-ratio: 61/68;
+          margin-top: -60px;
         }
         @include mixins.respond(sm) {
-          font-size: 80px;
+          width: 50px;
+          height: auto;
+          flex-shrink: 0;
+          aspect-ratio: 61/68;
+          margin-top: -60px;
         }
       }
+
     }
   }
-  // .layout-line{
-  //   background-image: url('../assets/images/line_ornament.svg');
-  //   background-repeat: no-repeat;
-  //   background-position: center;
-  //   background-size: cover;
-  //   max-width: 1440px;
-  //   width: 100%;
-  //   margin: auto;
-  // }
 }

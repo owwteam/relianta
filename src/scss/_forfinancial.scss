@@ -1,0 +1,357 @@
+@use 'mixins';
+@use 'base' as *;
+
+section.forfinancial{
+    background: #FFFFFF;
+    position: relative;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @include mixins.respond(md) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .container.forfinancial__container{
+        z-index: 1;
+        position: relative;
+        @include mixins.respond(md) {
+            padding: 10px 10px;
+        }
+        .forfinancial__content{
+            .forfinancial__content-head{
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                justify-content: space-between;
+                @include mixins.respond(md) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+            &--span{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-top: 12px;
+                gap: 6px;
+                img{
+                    width: 24px;
+                    height: 24px;
+                }
+                span{
+                    color: rgba(2, 6, 9, 0.80);
+                    font-feature-settings: 'liga' off, 'clig' off;
+                    font-family: Inter;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 1.12px;
+                    text-transform: uppercase;
+                }
+                .forfinancial__dsc{
+                    color: #020609;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 160%;
+                    text-transform: capitalize;
+                    opacity: 0.80;
+                    max-width: 328px;
+                    width: 100%;
+                    @include mixins.respond(md) {
+                        max-width: 100%;
+                    }
+                }
+            }
+            &--title{
+                color: #020609;
+                font-family: Inter;
+                font-size: 52px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 130%; /* 67.6px */
+                letter-spacing: -2.08px;
+                max-width: 529px;
+                @include mixins.respond(md) {
+                    font-size: 32px;
+                    margin-top: 12px;
+                }
+            }
+            &--icon{
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 64px;
+                padding-top: 16px;
+                margin-bottom: auto;
+                @include mixins.respond(md) {
+                    width: 100%;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+                img:nth-child(1){
+                    width: 48px;
+                    height: 24px;
+                }
+                img:nth-child(2){
+                    width: 196px;
+                    height: 16px;
+                    @include mixins.respond(md) {
+                        display: none;
+                    }
+                }
+            }
+            .forfinancial__content-body{
+                display: flex;
+                flex-direction: row;
+                margin-top: 72px;
+                justify-content: flex-end;
+                gap: 16px;
+                @include mixins.respond(md) {
+                    flex-direction: column;
+                    margin-top: 40px;
+                    gap: 16px;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .forfinancial__content-card{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 24px 24px 40px 24px;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    background: #F4F6F6;
+                    gap: 108px;
+                    max-width: 328px;
+                    width: 100%;
+                    @include mixins.respond(md) {
+                        max-width: 100%;
+                    }
+                    .forfinancial__card-head{
+                        display: flex;
+                        flex-direction: column;
+                        width: 100%;
+                        .forfinancial__card-span{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            span{
+                                color: #020609;
+                                font-family: Inter;
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: normal;
+                                letter-spacing: -0.72px;
+                                opacity: 0.4;
+                            }
+                        }
+                        .forfinancial__card-title{
+                            margin-top: 48px;
+                            margin-bottom: 32px;
+                            span{
+                                color: #020609;
+                                font-family: Inter;
+                                font-size: 32px;
+                                font-style: normal;
+                                font-weight: 600;
+                                line-height: 120%;
+                                letter-spacing: -1.28px;
+
+                            }
+                        }
+                        img{
+                            width: 194px;
+                        }
+                    }
+                    .forfinancial__card-body{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-end;
+                        justify-content: flex-end;
+                        span{
+                            color: #020609;
+                            text-align: right;
+                            font-family: Inter;
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 160%;
+                        }
+                    }
+                }
+                .forfinancial__content-card.black{
+                    background: black;
+                    .forfinancial__card-span{
+                        span{
+                            color: white;
+                        }
+                    }
+                    .forfinancial__card-title{
+                        span{
+                            color: white;
+                        }
+                    }
+                    .forfinancial__card-body{
+                        span{
+                            color: white;
+                        }
+                    }
+                    img{
+                        filter: contrast(1);
+                    }
+                }
+            }
+            .forfinancial__content-img{
+                margin-top: 60px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                width: 100%;
+                padding: 321px 40px 40px 40px;
+                background-image: url("assets/images/financial_img.png");
+                background-repeat: no-repeat;
+                background-position: center top;
+                overflow: hidden;
+                background-size: cover;
+                gap: 16px;
+                @include mixins.respond(md) {
+                    padding: 200px 20px 20px 20px;
+                }
+                span{
+                    color: white;
+                }
+                .forfinancial__img-text{
+                    color: #FFF;
+                    font-family: Inter;
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 120%;
+                    letter-spacing: -1.28px;
+                    max-width: 500px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.forfinancial__content-img{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 321px 40px 40px 40px;
+    background-image: url("assets/images/financial_img.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    overflow: hidden;
+    background-size: cover;
+    gap: 16px;
+    @include mixins.respond(md) {
+        padding: 200px 20px 20px 20px;
+    }
+    span{
+        color: white;
+    }
+    .forfinancial__img-text{
+        color: #FFF;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        letter-spacing: -1.28px;
+        max-width: 500px;
+        width: 100%;
+    }
+}
+
+.forpayment__content-img{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 321px 40px 40px 40px;
+    background-image: url("assets/images/forpayment-img.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    overflow: hidden;
+    background-size: cover;
+    gap: 16px;
+    @include mixins.respond(md) {
+        padding: 200px 20px 20px 20px;
+    }
+    .forpayment__content--span{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 12px;
+        gap: 6px;
+        span{
+            color: white;
+        }
+    }
+    .forpayment__img-text{
+        color: #FFF;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        letter-spacing: -1.28px;
+        max-width: 500px;
+        width: 100%;
+    }
+}
+
+
+.formarket__content-img{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    padding: 321px 40px 40px 40px;
+    background-image: url("assets/images/formarket-img.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+    overflow: hidden;
+    background-size: cover;
+    gap: 16px;
+    @include mixins.respond(md) {
+        padding: 200px 20px 20px 20px;
+    }
+    .formarket__content--span{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 12px;
+        gap: 6px;
+        span{
+            color: white;
+        }
+    }
+    .formarket__img-text{
+        color: #FFF;
+        font-family: Inter;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        letter-spacing: -1.28px;
+        max-width: 500px;
+        width: 100%;
+    }
+}
