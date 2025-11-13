@@ -124,6 +124,21 @@
       transform: translateY(-8px) rotate(-45deg);
     }
   }
+  &__logo{
+    span{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      a{
+        text-transform: uppercase;
+        font-family: 'Thunder LC';
+        font-size: 36px;
+        line-height: 100%;
+      }
+    }
+  }
 
 
   @include mixins.respond(md) {
@@ -153,6 +168,9 @@
   a.btn{
     background: $white;
     color: $black;
+    &:hover {
+      color: $black;
+    }
   }
 
 }
@@ -165,6 +183,21 @@
     }
     @include mixins.respond(md) {
       color: $white-60;
+    }
+  }
+  .navbar__toggle{
+    span{
+      background-color: $black;
+    }
+  }
+  .navbar__toggle.active{
+    span{
+      background-color: $white;
+    }
+  }
+  .navbar__logo{
+    a{
+      color: $black;
     }
   }
   a.btn{
