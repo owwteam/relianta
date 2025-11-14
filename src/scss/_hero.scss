@@ -9,13 +9,17 @@
   // background-size: cover;
   // color: white;
   // height: 1000px;
-  background: linear-gradient(180deg, #020609 0%, #458781 100%);
+  // background: linear-gradient(180deg, #020609 0%, #458781 100%);
+  background:
+  url("/assets/images/noice_grain.svg") repeat,
+  linear-gradient(180deg, #020609 0%, #458781 100%);
   .hero__layout{
-    background: $black url('../assets/images/img_hero.png') no-repeat;
-    background-position: center;
-    background-size: cover;
-    height: 1000px;
-    max-width: 1480px;
+    // background: url('../assets/images/bg_human.png') no-repeat;
+    // background-position: center;
+    // background-size: cover;
+    // height: 1000px;
+    max-width: 1440px;
+    padding-top: 120px;
     width: 100%;
     margin: auto;
     color: white;
@@ -97,6 +101,7 @@
         box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.02) inset, 0 -24px 32px 0 rgba(0, 0, 0, 0.24) inset, 0 8px 24px 0 rgba(255, 255, 255, 0.06) inset;
         backdrop-filter: blur(12px);
         margin-bottom: auto;
+        margin-top: auto;
 
         display: flex;
         width: 200px;
@@ -182,7 +187,7 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      gap: 293px;
+      gap: 240px;
       @include mixins.respond(md) {
         gap: 100px;
       }
@@ -217,7 +222,7 @@
   }
 
   .container.hero__bottom{
-    margin-top: 70px;
+    margin-top: 40px;
     margin-bottom: 32px;
     .scroll_down{
       @include mixins.respond(md) {
@@ -262,4 +267,13 @@
       text-transform: uppercase;
     }
   }
+}
+
+.img-human{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 54px;
+  left: 0;
+  object-fit: contain;
 }

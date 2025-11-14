@@ -2,7 +2,10 @@
 @use 'base' as *;
 
 .footer{
-  background: linear-gradient(180deg, #020609 0%, #234441 100%);
+  background:
+    url("/assets/images/noice_grain.svg") repeat,
+    linear-gradient(180deg, #020609 0%, #234441 100%);
+  background-size: auto;
   padding-top: 100px;
   position: relative;
   @include mixins.respond(md) {
