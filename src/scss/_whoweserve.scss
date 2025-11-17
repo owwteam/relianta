@@ -110,6 +110,11 @@ section.section-whoweserve{
             .content-body_img{
                 display: flex;
                 flex-direction: column;
+                img:nth-child(1){
+                    @include mixins.respond(md) {
+                        display: none;
+                    }
+                }
                 .whoserve_fotos{
                     margin-top: 32px;
                     margin-bottom: 24px;

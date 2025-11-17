@@ -86,7 +86,7 @@ section.section-aboutus{
             align-items: flex-end;
             @include mixins.respond(md) {
                 flex-direction: column;
-                gap: 80px;
+                gap: 20px;
             }
             .body__left{
                 width: 100%;
@@ -127,7 +127,7 @@ section.section-aboutus{
                 flex-direction: row;
                 gap: 16px;
                 @include mixins.respond(md) {
-                    flex-direction: column;
+                    flex-direction: column-reverse;
                 }
                 img{
                     width: 442px;
