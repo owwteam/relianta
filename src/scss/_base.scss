@@ -147,6 +147,9 @@ button, .btn{
   width: 100%;
   max-width: 1440px;
   height: auto;
+  @include mixins.respond(md) {
+    display: none;
+  }
 }
 
 .tag-section{                

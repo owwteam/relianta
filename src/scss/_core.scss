@@ -12,7 +12,8 @@ section.core{
     background-size: cover;
     @include mixins.respond(md) {
         padding-top: 80px;
-        background: linear-gradient(180deg, #020609 0%, #458781 100%);
+        background-position: -650px;
+        // background: linear-gradient(180deg, #020609 0%, #458781 100%);
     }
     .container.core__container{
         z-index: 1;
