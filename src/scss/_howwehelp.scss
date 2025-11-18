@@ -1,0 +1,27 @@
+@use 'mixins';
+@use 'base' as *;
+
+.howwehelp__body{
+    margin-top: 10px!important;
+    .howwehelp__head{
+        display: flex;
+        flex-direction: column!important;
+        gap: 200px;
+        align-items: flex-start!important;
+        @include mixins.respond(md) {
+            gap: 40px!important;
+        }
+        span{
+            color: #020609;
+            font-family: Inter;
+            font-size: 52px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%; /* 67.6px */
+            letter-spacing: -2.08px;
+            @include mixins.respond(md) {
+                font-size: 40px;
+            }
+        }
+    }
+}

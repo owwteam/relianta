@@ -159,7 +159,7 @@
   .navbar__menu a {
     color: $white-60;
     &:hover {
-      color: $white;
+      color: #458781;
     }
     @include mixins.respond(md) {
       color: $white-60;
@@ -179,7 +179,7 @@
   .navbar__menu a {
     color: $black;
     &:hover {
-      color: $white;
+      color: #458781;
     }
     @include mixins.respond(md) {
       color: $white-60;
