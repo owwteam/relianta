@@ -108,7 +108,7 @@ section.section-whoweserve{
                 flex-direction: column;
             }
             .content-body_img{
-                display: flex;
+                display: none;
                 flex-direction: column;
                 img:nth-child(1){
                     @include mixins.respond(md) {
@@ -194,4 +194,8 @@ section.section-whoweserve{
             }
         }
     }
+}
+
+.show{
+    display: flex !important;
 }

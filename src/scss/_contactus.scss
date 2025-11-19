@@ -1,0 +1,167 @@
+@use 'mixins';
+@use 'base' as *;
+
+
+.contact-page {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 130px;
+    background: #F4F6F6;
+    padding: 80px 40px 100px 40px;
+    margin-bottom: 120px;
+    @include mixins.respond(md) {
+        padding: 40px 10px 40px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    }
+    
+    .form_title {
+        color: #020609;
+        font-family: Inter;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+        letter-spacing: -1.6px;
+    }
+    
+    /* LEFT SIDE */
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 80px;
+        @include mixins.respond(md) {
+            margin-top: 40px;
+        }
+        .input-group{
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+            width: 100%;
+            margin-bottom: 48px;
+            @include mixins.respond(md) {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                margin-bottom: 40px;
+            }
+        }
+            label {
+                font-weight: 500;
+                font-size: 14px;
+            }
+            
+            input, textarea {
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid #dcdcdc;
+                padding: 10px 0;
+                font-size: 15px;
+                font-family: 'inter', sans-serif;
+                background: transparent;
+                outline: none;
+                
+                &:focus {
+                border-color: #000;
+                }
+            }
+            textarea {
+                min-height: 140px;
+                resize: vertical;
+            }
+    }
+    
+    
+    .contact-note {
+        color: rgba(2, 6, 9, 0.60);
+        text-align: justify;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        margin-top: 24px;
+        margin-bottom: 48px;
+        max-width: 632px;
+    }
+    
+    .send-btn {
+        padding: 14px 28px;
+        background: #000;
+        color: white;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        letter-spacing: 0.5px;
+        transition: 0.25s;
+    }
+.contact-right{
+    .contact-content{
+        margin-block: 48px;
+        .contact-content-title{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 48px;
+            span{
+                color: #020609;
+                font-feature-settings: 'liga' off, 'clig' off;
+                font-family: Inter;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 1.12px;
+                text-transform: uppercase;
+            }
+        }
+        .contact-details{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 64px;
+            grid-row-gap: 40px;
+            @include mixins.respond(md) {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+            }
+            .contact-item{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                .label{
+                    color: rgba(2, 6, 9, 0.60);
+                    font-family: Inter;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: -0.48px;
+                    text-transform: uppercase;
+                }
+                .val{
+                    color: #020609;
+                    font-family: Inter;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 120%;
+                    letter-spacing: -0.96px;
+                }
+            }
+        }
+    }
+}
+.top{
+    margin-top: 0px!important;
+}
+.office-deatails{
+    grid-template-columns: 1fr !important;
+}

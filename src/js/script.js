@@ -43,3 +43,97 @@ navToggle.addEventListener("click", () => {
 		document.body.style.overflow = "";
 	}
 });
+// we serve ANIMATION
+const links = document.querySelectorAll(".whoweserve__link");
+const images = document.querySelectorAll(".content-body_img");
+
+links.forEach((link, index) => {
+	link.addEventListener("mouseenter", () => {
+		images.forEach(img => img.classList.remove("show"));
+
+		images[index].classList.add("show");
+	});
+});
+
+
+// gsap ANIMATION
+gsap.registerPlugin(ScrollTrigger);
+
+// PIN GAMBAR
+gsap.timeline({
+	scrollTrigger: {
+		trigger: ".howwework__img-progress",
+		start: "top 20%",
+		end: "+=500",
+		scrub: true,
+		pin: true,
+		// markers: true
+	}
+});
+
+
+
+function setActiveContent(index) {
+	const boxes = document.querySelectorAll(".line-progress__box");
+
+	const img = document.querySelector(".howwework__img-progress img");
+	const numbImg = document.querySelector(".numb-img_progress");
+	const textImg = document.querySelector(".text-img_progress");
+
+	const activeBox = boxes[index];
+
+	if (!activeBox) return;
+
+	
+	const number = activeBox.querySelector(".line-box__numb").textContent.trim();
+	const text = activeBox.querySelector(".tagline-box_text").textContent.trim();
+
+	
+	numbImg.textContent = number;
+	textImg.textContent = text;
+
+	
+	img.src = `/assets/images/img-howwework-${index + 1}.png`;
+}
+
+
+
+let tl = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".line-progress__box",
+		start: "top 10%",
+		end: "bottom top",
+		scrub: true,
+		// markers: true,
+		onLeaveBack: () => setActiveContent(0)
+	}
+});
+
+
+
+// LINE 1
+tl.fromTo(".line1", { height: "0%" }, { height: "100%" })
+	.to(".dot2", { backgroundColor: "#458781", duration: 0.01 })
+	.add(() => {
+		setActiveContent(1);
+});
+
+// LINE 2
+tl.fromTo(".line2", { height: "0%" }, { height: "100%" })
+	.to(".dot3", { backgroundColor: "#458781", duration: 0.01 })
+	.add(() => {
+		setActiveContent(2);
+});
+
+// LINE 3
+tl.fromTo(".line3", { height: "0%" }, { height: "100%" })
+	.to(".dot4", { backgroundColor: "#458781", duration: 0.01 })
+	.add(() => {
+		setActiveContent(3);
+});
+
+// LINE 4
+tl.fromTo(".line4", { height: "0%" }, { height: "100%" })
+.add(() => {
+	setActiveContent(4);
+});

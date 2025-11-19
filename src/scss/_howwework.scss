@@ -5,7 +5,7 @@ section.howwework{
     background: #FFFFFF;
     position: relative;
     padding-top: 80px;
-    overflow: hidden;
+    // overflow: hidden;
     @include mixins.respond(md) {
         padding-top: 40px;
         // padding-bottom: 40px;
@@ -112,7 +112,10 @@ section.howwework{
                 margin-top: 100px;
                 justify-content: flex-start;
                 gap: 130px;
+                position: relative;
                 .howwework__img-progress{
+                    // position: sticky;
+                    // top: 20px;
                     @include mixins.respond(md) {
                         display: none;
                         margin-top: 80px;
@@ -184,18 +187,28 @@ section.howwework{
                             .line-box__square{
                                 width: 18px;
                                 height: 18px;
-                                background: #458781;
+                                // background: #458781;
+                                background: #F4F6F6;
                                 position: relative;
                             }
-                            .line-box__dash{
-                                width: 3px;
-                                // min-height: 220px;
-                                height: 100%;
+                            .dot1{
                                 background: #458781;
-                                position: absolute;
-                                top: 0px;
-                                left: 50%;
-                                transform: translateX(-50%);
+                            }
+                            .line-box__wrap{
+                                position: relative;
+                                height: 100%;
+                                width: 3px;
+                                background-color: #F4F6F6;
+                                .line-box__dash{
+                                    width: 3px;
+                                    // min-height: 220px;
+                                    height: 0%;
+                                    background: #458781;
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                }
                             }
                         }
                         .line-box__text{
