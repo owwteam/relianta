@@ -16,6 +16,9 @@
         flex-direction: column;
         gap: 40px;
     }
+    @include mixins.respond(xl) {
+        gap: 40px;
+    }
     }
     
     .form_title {
@@ -45,6 +48,12 @@
             width: 100%;
             margin-bottom: 48px;
             @include mixins.respond(md) {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                margin-bottom: 40px;
+            }
+            @include mixins.respond(xl) {
                 display: flex;
                 flex-direction: column;
                 gap: 40px;

@@ -129,6 +129,9 @@ section.forfinancial{
                     @include mixins.respond(md) {
                         max-width: 100%;
                     }
+                    @include mixins.respond(xl) {
+                        gap: 40px;
+                    }
                     .forfinancial__card-head{
                         display: flex;
                         flex-direction: column;

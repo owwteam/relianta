@@ -144,8 +144,8 @@ section.services-page{
                         display: grid;
                         grid-template-columns: 0.65fr repeat(2, 1fr);
                         grid-template-rows: 1fr;
-                        grid-column-gap: 0px;
-                        grid-row-gap: 0px;
+                        grid-column-gap: 20px;
+                        grid-row-gap: 20px;
                         align-items: center;
                         z-index: 1;
                         position: relative;
