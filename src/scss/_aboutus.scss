@@ -18,6 +18,7 @@ section.section-aboutus{
                 align-items: flex-start;
                 flex-direction: row;
                 justify-content: space-between;
+                gap: 40px;
                 @include mixins.respond(md) {
                     flex-direction: column;
                 }
@@ -43,6 +44,7 @@ section.section-aboutus{
                     line-height: normal;
                     letter-spacing: 1.12px;
                     text-transform: uppercase;
+                    min-width: 90px;
                 }
             }
             &--title{
@@ -87,6 +89,7 @@ section.section-aboutus{
             @include mixins.respond(md) {
                 flex-direction: column;
                 gap: 20px;
+                align-items: flex-start;
             }
             .body__left{
                 width: 100%;
@@ -128,6 +131,7 @@ section.section-aboutus{
                 gap: 16px;
                 @include mixins.respond(md) {
                     flex-direction: column-reverse;
+                    width: 100%;
                 }
                 img{
                     width: 442px;

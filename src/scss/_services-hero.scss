@@ -22,9 +22,12 @@ section.services{
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: flex-end;
+                flex-wrap: wrap;
                 @include mixins.respond(md) {
                     flex-direction: column;
                     gap: 20px;
+                    align-items: flex-start;
+                    max-width: 500px;
                 }
                 h1 {
                     color: #020609;

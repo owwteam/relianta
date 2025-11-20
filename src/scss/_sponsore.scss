@@ -12,6 +12,7 @@ section.sponsore{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             @include mixins.respond(md) {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);

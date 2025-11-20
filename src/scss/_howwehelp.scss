@@ -3,12 +3,20 @@
 
 .howwehelp__body{
     margin-top: 10px!important;
+    @include mixins.respond(xl) {
+        flex-wrap: wrap;
+        justify-content: flex-start!important;
+    }
     .howwehelp__head{
         display: flex;
         flex-direction: column!important;
         gap: 200px;
         align-items: flex-start!important;
+        max-width: 328px;
         @include mixins.respond(md) {
+            gap: 40px!important;
+        }
+        @include mixins.respond(xl) {
             gap: 40px!important;
         }
         span{

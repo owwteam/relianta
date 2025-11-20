@@ -113,6 +113,9 @@ section.howwework{
                 justify-content: flex-start;
                 gap: 130px;
                 position: relative;
+                @include mixins.respond(xl) {
+                    justify-content: space-between;
+                }
                 .howwework__img-progress{
                     // position: sticky;
                     // top: 20px;
@@ -218,6 +221,8 @@ section.howwework{
                             align-items: flex-start;
                             gap: 12px;
                             padding-bottom: 80px;
+                            max-width: 335px;
+                            width: 100%;
                             .tagline-box_text{
                                 color: #FFF;
                                 font-family: Inter;
