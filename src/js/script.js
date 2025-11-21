@@ -64,10 +64,10 @@ gsap.timeline({
 	scrollTrigger: {
 		trigger: ".howwework__img-progress",
 		start: "top 20%",
-		end: "+=500",
+		// end: "+=600",
+		end: "bottom bottom",
 		scrub: true,
-		pin: true,
-		// markers: true
+		//pin: true,
 	}
 });
 

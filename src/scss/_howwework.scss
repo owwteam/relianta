@@ -117,31 +117,39 @@ section.howwework{
                     justify-content: space-between;
                 }
                 .howwework__img-progress{
-                    // position: sticky;
-                    // top: 20px;
+                    position: relative;
+                    padding-bottom: 40px;
                     @include mixins.respond(md) {
                         display: none;
                         margin-top: 80px;
                     }
-                    img{
-                        width: 100%;
-                        max-width: 557px;
-
-                    }
-                    .howwework__img-text{
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin-top: 10px;
-                        span{
-                            color: #020609;
-                            font-family: Inter;
-                            font-size: 12px;
-                            font-style: normal;
-                            font-weight: 500;
-                            line-height: normal;
-                            letter-spacing: -0.72px;
+                    .howwework__img-box{
+                        position: sticky;
+                        top: 100px;
+                        @include mixins.respond(md) {
+                            display: none;
+                            margin-top: 80px;
+                        }
+                        img{
+                            width: 100%;
+                            max-width: 557px;
+    
+                        }
+                        .howwework__img-text{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-top: 10px;
+                            span{
+                                color: #020609;
+                                font-family: Inter;
+                                font-size: 12px;
+                                font-style: normal;
+                                font-weight: 500;
+                                line-height: normal;
+                                letter-spacing: -0.72px;
+                            }
                         }
                     }
                 }
@@ -273,6 +281,7 @@ section.howwework{
         background-image: url("assets/images/howwework-img-btm.png");
         background-repeat: no-repeat;
         background-position: center top;
+        background-size: cover;
         padding: 120px 40px 130px 40px;
         display: flex;
         align-items: flex-start;
@@ -286,24 +295,38 @@ section.howwework{
             padding: 40px 10px 40px 10px;
             background-size: cover;
         }
-        .img-bottom__dsc{
-            color: #FFF;
-            font-family: Inter;
-            font-size: 20px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 160%;
-            max-width: 901px;
-            @include mixins.respond(md) {
-                font-size: 16px;
-                max-width: 100%;
-            }
-        }
-        .services-page__content--span{
-            gap: 8px;
+        &--box{
             display: flex;
+            align-items: flex-start;
             flex-direction: row;
-            align-items: center;
+            gap: 160px;
+            color: #FFFFFF;
+            margin-left: auto;
+            margin-right: auto;
+            @include mixins.respond(md) {
+                flex-direction: column;
+                gap: 20px
+            }
+            .img-bottom__dsc{
+                color: #FFF;
+                font-family: Inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 160%;
+                max-width: 901px;
+                @include mixins.respond(md) {
+                    font-size: 16px;
+                    max-width: 100%;
+                }
+            }
+            .services-page__content--span{
+                gap: 8px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
         }
     }
 }
