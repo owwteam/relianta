@@ -43,17 +43,43 @@ navToggle.addEventListener("click", () => {
 		document.body.style.overflow = "";
 	}
 });
+
 // we serve ANIMATION
-const links = document.querySelectorAll(".whoweserve__link");
-const images = document.querySelectorAll(".content-body_img");
 
-links.forEach((link, index) => {
-	link.addEventListener("mouseenter", () => {
-		images.forEach(img => img.classList.remove("show"));
+document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll(".whoweserve__link");
+    const contents = document.querySelectorAll(".content-body_img");
 
-		images[index].classList.add("show");
-	});
+    function pauseAllVideos() {
+        contents.forEach((box) => {
+            const vid = box.querySelector("video");
+            if (vid) {
+                vid.pause();
+                vid.currentTime = 0;
+            }
+        });
+    }
+
+    links.forEach((link, index) => {
+        link.addEventListener("mouseenter", () => {
+
+            contents.forEach((c) => c.classList.remove("show"));
+            pauseAllVideos();
+
+            const target = contents[index];
+            target.classList.add("show");
+
+            const video = target.querySelector("video");
+            if (video) {
+                video.play();
+            }
+        });
+    });
 });
+
+
+
+
 
 
 // gsap ANIMATION
