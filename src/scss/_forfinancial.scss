@@ -4,8 +4,8 @@
 section.forfinancial{
     background: #FFFFFF;
     position: relative;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    // padding-top: 80px;
+    // padding-bottom: 80px;
     @include mixins.respond(md) {
         padding-top: 40px;
         padding-bottom: 40px;
@@ -13,6 +13,9 @@ section.forfinancial{
     .container.forfinancial__container{
         z-index: 1;
         position: relative;
+        border-inline: 1px solid rgba(0, 0, 0, 0.12);
+        padding-top: 80px;
+        padding-bottom: 90px;
         @include mixins.respond(md) {
             padding: 10px 10px;
         }

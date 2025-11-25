@@ -1,37 +1,48 @@
 @use 'mixins';
 @use 'base' as *;
 
-.howwehelp__body{
-    margin-top: 10px!important;
-    @include mixins.respond(xl) {
-        flex-wrap: wrap;
-        justify-content: flex-start!important;
-    }
-    .howwehelp__head{
-        display: flex;
-        flex-direction: column!important;
-        gap: 200px;
-        align-items: flex-start!important;
-        max-width: 328px;
-        @include mixins.respond(md) {
-            gap: 40px!important;
-            align-items: flex-start!important;
-            margin-right: auto;
-        }
+
+.howwehelp{
+    .howwehelp__body{
+        margin-top: 10px!important;
         @include mixins.respond(xl) {
-            gap: 40px!important;
+            flex-wrap: wrap;
+            justify-content: flex-start!important;
         }
-        span{
-            color: #020609;
-            font-family: Inter;
-            font-size: 52px;
-            font-style: normal;
-            font-weight: 600;
-            line-height: 130%; /* 67.6px */
-            letter-spacing: -2.08px;
+        .howwehelp__head{
+            display: flex;
+            flex-direction: column!important;
+            gap: 200px;
+            align-items: flex-start!important;
+            max-width: 328px;
             @include mixins.respond(md) {
-                font-size: 40px;
+                gap: 40px!important;
+                align-items: flex-start!important;
+                margin-right: auto;
             }
+            @include mixins.respond(xl) {
+                gap: 40px!important;
+            }
+            span{
+                color: #020609;
+                font-family: Inter;
+                font-size: 52px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 130%; /* 67.6px */
+                letter-spacing: -2.08px;
+                @include mixins.respond(md) {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    .container{
+        padding-top: 100px!important;
+    }
+    .oranament-line{
+        .line.oranament-bg-bottom{
+            top: 600px!important;
         }
     }
 }

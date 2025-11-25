@@ -8,6 +8,7 @@ section.section-whoweserve{
         padding-top: 140px;
         padding-bottom: 100px;
         position: relative;
+        border-inline: 1px solid rgba(0, 0, 0, 0.12);
         @include mixins.respond(md) {
             padding-top: 80px;
             padding-bottom: 80px;
@@ -122,9 +123,10 @@ section.section-whoweserve{
                     margin-top: 32px;
                     margin-bottom: 24px;
                     max-width: 443px;
-                    height: auto;
+                    height: 280px;
                     @include mixins.respond(md) {
                         max-width: 100%;
+                        height: auto;
                     }
                 }
                 span{

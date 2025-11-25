@@ -4,8 +4,8 @@
 section.services-page{
     background: #FFFFFF;
     position: relative;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    // padding-top: 80px;
+    // padding-bottom: 80px;
     @include mixins.respond(md) {
         padding-top: 40px;
         padding-bottom: 40px;
@@ -13,6 +13,9 @@ section.services-page{
     .container.services-page__container{
         z-index: 1;
         position: relative;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        border-inline: 1px solid rgba(0, 0, 0, 0.12);
         @include mixins.respond(md) {
             padding: 10px 10px;
         }
@@ -304,5 +307,16 @@ section.services-page{
     background-image: url("assets/images/service-3-img.png")!important;
 }
 .service-3_layout{
-    padding-bottom: 120px!important;
+    .container.services-page__container{
+        padding-bottom: 120px!important;
+    }
+}
+
+.service-line{
+    .line.oranament-bg-up{
+        top: 76px;
+    }
+    .line.oranament-bg-bottom{
+        top: 1330px;
+    }
 }
