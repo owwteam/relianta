@@ -173,5 +173,12 @@
     grid-template-columns: 1fr !important;
 }
 #contact{
-    padding-bottom: 120px;
+    .howwework__container{
+        padding-bottom: 120px;
+    }
+    .oranament-line{
+        .line.oranament-bg-bottom{
+            top: 1000px!important;
+        }
+    }
 }

@@ -3,7 +3,7 @@
 
 section.solutions{
     background-color: $white;
-    padding-top: 160px;
+    // padding-top: 160px;
     // padding-bottom: 80px;
     position: relative;
     @include mixins.respond(md) {
@@ -11,9 +11,12 @@ section.solutions{
     }
     .container.solutions__container{
         position: relative;
-        margin-bottom: 80px;
+        padding-bottom: 80px;
+        border-inline: 1px solid rgba(0, 0, 0, 0.12);
+        padding-top: 160px;
         @include mixins.respond(md) {
             margin-bottom: 40px;
+            padding-top: 80px;
         }
         .solutions__content{
             &-head{
@@ -53,14 +56,38 @@ section.solutions{
             }
         }
     }
-    .solutions__content-body{
-        position: relative;
-        z-index: 1;
+    // .solutions__content-body{
+    //     position: relative;
+    //     z-index: 1;
+    //     width: 100%;
+    //     max-width: 1500px;
+    //     margin: auto;
+    //     img{
+    //         width: 100%;
+    //     }
+    // }
+}
+
+section.solutions__content-body{
+    padding: unset;
+    border-inline: 1px solid rgba(0, 0, 0, 0.12);
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
+    height: 615px;
+    // background-color: white;
+    @include mixins.respond(md) {
+        height: 300px;
+    }
+    img{
         width: 100%;
-        max-width: 1500px;
-        margin: auto;
-        img{
-            width: 100%;
+        max-width: 100%;
+        height: 615px;
+        object-fit: cover;
+        @include mixins.respond(md) {
+            height: 300px;
         }
     }
 }

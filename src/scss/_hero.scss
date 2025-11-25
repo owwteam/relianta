@@ -7,13 +7,14 @@
   linear-gradient(180deg, #020609 0%, #458781 100%);
   .hero__layout{
     max-width: 1440px;
-    padding-top: 120px;
+    padding-top: 220px;
     width: 100%;
     margin: auto;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-inline: 1px solid rgba(255, 255, 255, 0.12);
     @include mixins.respond(md) {
       height: auto;
       padding-top: 80px;

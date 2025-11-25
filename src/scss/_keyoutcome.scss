@@ -4,17 +4,16 @@
 section.keyoutcome{
     background: #F4F6F6;
     position: relative;
-    padding-top: 120px;
-    padding-bottom: 100px;
-    @include mixins.respond(md) {
-        padding-top: 40px;
-        padding-bottom: 80px;
-    }
     .container.keyoutcome__container{
         z-index: 1;
         position: relative;
+        border-inline: 1px solid rgba(0, 0, 0, 0.12);
+        padding-top: 120px;
+        padding-bottom: 100px;
         @include mixins.respond(md) {
             padding: 10px 10px;
+            padding-top: 40px;
+            padding-bottom: 80px;
         }
         .keyoutcome__content{
             .keyoutcome__content-head{
@@ -233,6 +232,7 @@ section.keyoutcome{
         padding: 15px 10px!important;
     }
     .keyoutcome__content-body--item {
+        padding-inline: 20px;
         .item__number {
             opacity: 1!important;
             transition: opacity 0.4s ease;

@@ -3,8 +3,6 @@
 
 section.core{
     position: relative;
-    padding-top: 262px;
-    padding-bottom: 40px;
     background-image: url("assets/images/bg-core.png");
     background-repeat: no-repeat;
     background-position: center top;
@@ -19,12 +17,18 @@ section.core{
         padding-top: 80px;
         background-position: cover;
     }
-    @include mixins.respond(xl) {
-        padding-top: 80px;
-    }
+    // @include mixins.respond(xl) {
+    //     padding-top: 80px;
+    // }
     .container.core__container{
+        padding-top: 262px;
+        padding-bottom: 40px;
         z-index: 1;
         position: relative;
+        border-inline: 1px solid rgba(255, 255, 255, 0.12);
+        @include mixins.respond(md) {
+            padding-top: 100px;
+        }
         .core__content{
             display: flex;
             flex-direction: column;
@@ -102,5 +106,17 @@ section.core{
             }
         }
 
+    }
+}
+.white{
+    .line.oranament-bg-up{
+        background-color: rgba(255, 255, 255, 0.12);
+        top: 236px;
+        .line-square-right{
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+        .line-square-left{
+            background-color: rgba(255, 255, 255, 0.12);
+        }
     }
 }

@@ -6,16 +6,19 @@
     url("/assets/images/noice_grain.svg") repeat,
     linear-gradient(180deg, #020609 0%, #234441 100%);
   background-size: auto;
-  padding-top: 100px;
+  // padding-top: 100px;
   position: relative;
   @include mixins.respond(md) {
-    padding-top: 80px;
+    padding-top: 0px;
   }
   .container:nth-child(1){
+    padding-top: 100px;
     padding-inline: 32px;
+    border-inline: 1px solid rgba(255, 255, 255, 0.12);
 
     @include mixins.respond(md) {
       padding-inline: 10px;
+      padding-top: 80px;
     }
   }
 
@@ -25,6 +28,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-inline: 1px solid rgba(255, 255, 255, 0.12);
     p{
       color: #FFF;
       font-family: Inter;
@@ -176,7 +180,7 @@
       display: flex;
       margin-top: -40px;
       @include mixins.respond(xl) {
-        font-size: 380px;
+        font-size: 300px;
       }
       @include mixins.respond(md) {
         font-size: 180px;
@@ -210,4 +214,26 @@
 }
 .layout-line{
   overflow: hidden;
+}
+.footer{
+  .line.oranament-bg-up{
+      background-color: rgba(255, 255, 255, 0.12);
+      top: 80px;
+      .line-square-right{
+          background-color: rgba(255, 255, 255, 0.12);
+      }
+      .line-square-left{
+          background-color: rgba(255, 255, 255, 0.12);
+      }
+  }
+  .line.oranament-bg-bottom{
+    background-color: rgba(255, 255, 255, 0.12);
+    top: 780px;
+    .line-square-right{
+        background-color: rgba(255, 255, 255, 0.12);
+    }
+    .line-square-left{
+        background-color: rgba(255, 255, 255, 0.12);
+    }
+}
 }
