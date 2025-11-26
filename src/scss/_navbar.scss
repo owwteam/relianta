@@ -56,10 +56,11 @@
         font-weight: 400;
         letter-spacing: -0.16px;
         text-transform: uppercase;
+        font-family: Inter;
         &:hover {
           color: $white;
         }
-        @include mixins.font('secondary');
+        // @include mixins.font('secondary');
   
         @include mixins.respond(md) {
           font-size: 14px;
@@ -133,7 +134,7 @@
       gap: 8px;
       a{
         text-transform: uppercase;
-        font-family: 'Thunder LC';
+        font-family: 'Thunder LC', sans-serif;
         font-size: 36px;
         line-height: 100%;
       }
