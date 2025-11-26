@@ -119,14 +119,23 @@ section.section-whoweserve{
                         display: none;
                     }
                 }
-                .whoserve_fotos{
-                    margin-top: 32px;
-                    margin-bottom: 24px;
+                .video-wrapper{
+                    overflow: hidden;
                     max-width: 443px;
                     height: 280px;
+                    margin-top: 32px;
+                    margin-bottom: 24px;
                     @include mixins.respond(md) {
                         max-width: 100%;
                         height: auto;
+                    }
+                    .whoserve_fotos{
+                        max-width: 443px;
+                        height: 280px;
+                        @include mixins.respond(md) {
+                            max-width: 100%;
+                            height: auto;
+                        }
                     }
                 }
                 span{
@@ -206,4 +215,11 @@ section.section-whoweserve{
 
 .show{
     display: flex !important;
+}
+
+.video-3{
+    .whoserve_fotos{
+        height: 280px!important;
+        max-width: 474px!important;
+    }
 }

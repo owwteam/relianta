@@ -11,7 +11,7 @@ section.services{
         // padding-inline: 40px;
         border-inline: 1px solid rgba(0, 0, 0, 0.12);
         @include mixins.respond(md) {
-            margin-bottom: 40px;
+            margin-bottom: unset;
             padding-top: 120px;
         }
         .services__content{
@@ -40,6 +40,7 @@ section.services{
                     max-width: 832px;
                     @include mixins.respond(md) {
                         font-size: 40px;
+                        letter-spacing: -1.12px;
                     }
                 }
                 p{

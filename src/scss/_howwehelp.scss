@@ -43,6 +43,9 @@
     .oranament-line{
         .line.oranament-bg-bottom{
             top: 600px!important;
+            @include mixins.respond(xl) {
+                top: 900px!important;
+            }
         }
     }
 }

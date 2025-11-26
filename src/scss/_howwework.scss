@@ -118,6 +118,9 @@ section.howwework{
                 @include mixins.respond(xl) {
                     justify-content: space-between;
                 }
+                @include mixins.respond(md) {
+                    margin-top: 40px;
+                }
                 .howwework__img-progress{
                     position: relative;
                     padding-bottom: 40px;
@@ -315,8 +318,9 @@ section.howwework__img-bottom{
         @include mixins.respond(md) {
             flex-direction: column;
             gap: 20px;
-            padding-top: 80px;
-            padding-bottom: 80px;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            padding-inline: 20px;
         }
         .img-bottom__dsc{
             color: #FFF;
@@ -336,6 +340,10 @@ section.howwework__img-bottom{
             display: flex;
             flex-direction: row;
             align-items: center;
+            width: 800px;
+            @include mixins.respond(md) {
+                width: 100%;
+            }
         }
 
     }

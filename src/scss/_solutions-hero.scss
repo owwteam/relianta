@@ -15,8 +15,8 @@ section.solutions{
         border-inline: 1px solid rgba(0, 0, 0, 0.12);
         padding-top: 160px;
         @include mixins.respond(md) {
-            margin-bottom: 40px;
-            padding-top: 80px;
+            margin-bottom: unset;
+            padding-top: 40px;
         }
         .solutions__content{
             &-head{
@@ -42,6 +42,7 @@ section.solutions{
                     max-width: 832px;
                     @include mixins.respond(md) {
                         font-size: 48px;
+                        letter-spacing: -1.12px;
                     }
                 }
                 p{
