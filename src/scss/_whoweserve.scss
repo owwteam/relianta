@@ -137,6 +137,18 @@ section.section-whoweserve{
                             height: auto;
                         }
                     }
+                    img{
+                        display: none;
+                        @include mixins.respond(md) {
+                            display: block;
+                        }
+                    }
+                    video{
+                        display: block;
+                        @include mixins.respond(md) {
+                            display: none;
+                        }
+                    }
                 }
                 span{
                     color: #020609;
@@ -221,5 +233,9 @@ section.section-whoweserve{
     .whoserve_fotos{
         height: 280px!important;
         max-width: 474px!important;
+        @include mixins.respond(md) {
+            height: auto!important;
+            max-width: 100%!important;
+        }
     }
 }

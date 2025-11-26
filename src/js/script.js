@@ -77,6 +77,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 video.play();
             }
         });
+		link.addEventListener("click", () => {
+
+            contents.forEach((c) => c.classList.remove("show"));
+            pauseAllVideos();
+
+            const target = contents[index];
+            target.classList.add("show");
+
+            const video = target.querySelector("video");
+            if (video) {
+                video.play();
+            }
+        });
     });
 });
 
@@ -166,3 +179,5 @@ tl.fromTo(".line4", { height: "0%" }, { height: "100%" })
 .add(() => {
 	setActiveContent(4);
 });
+
+
