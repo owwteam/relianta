@@ -17,6 +17,7 @@
     }
     @include mixins.respond(xl) {
         gap: 40px;
+        margin-top: 10px;
     }
     }
     

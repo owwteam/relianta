@@ -178,11 +178,11 @@
 .navbar--dark {
   .navbar__menu a {
     color: $black;
+    @include mixins.respond(md) {
+      color: white;
+    }
     &:hover {
       color: #458781;
-    }
-    @include mixins.respond(md) {
-      color: $white-60;
     }
   }
   .navbar__toggle{
@@ -198,7 +198,14 @@
   .navbar__logo{
     a{
       color: $black;
+      // @include mixins.respond(md) {
+      //   color: white;
+      // }
     }
+    .dark{
+      color: white;
+    }
+    
   }
   a.btn{
     background: $black;

@@ -31,11 +31,14 @@ window.addEventListener("scroll", () => {
 
 const navToggle = document.querySelector(".navbar__toggle");
 const navMenu = document.querySelector(".navbar__menu");
+const textLogo = document.querySelector(".text-logo");
+
 
 navToggle.addEventListener("click", () => {
 	const isActive = navToggle.classList.toggle("active");
 	navMenu.classList.toggle("active");
 	navbar.classList.remove("show", "hidden");
+	textLogo.classList.toggle("dark");
 
 	if (isActive) {
 		document.body.style.overflow = "hidden";
