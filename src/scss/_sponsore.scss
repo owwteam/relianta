@@ -16,7 +16,7 @@ section.sponsore{
             @include mixins.respond(md) {
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                gap: 24px;
+                row-gap: 20px;
             }
             .sponsore__logo{
                 width: 189px;
