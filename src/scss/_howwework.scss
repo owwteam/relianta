@@ -1,48 +1,71 @@
 @use 'mixins';
 @use 'base' as *;
 
-section.howwework{
+section.howwework {
     background: #FFFFFF;
     position: relative;
+
     // padding-top: 80px;
     // overflow: hidden;
     @include mixins.respond(md) {
         padding-top: 40px;
         // padding-bottom: 40px;
     }
-    .container.howwework__container{
+
+    .container.howwework__container {
         z-index: 1;
         position: relative;
         padding-top: 100px;
         border-inline: 1px solid rgba(0, 0, 0, 0.12);
+
         @include mixins.respond(md) {
             padding: 10px 10px 0px 10px;
         }
-        .howwework__content{
-            .howwework__content-head{
+
+        .howwework__content {
+            .howwework__content-head {
                 display: flex;
                 align-items: center;
                 flex-direction: row;
                 justify-content: flex-start;
                 gap: 246px;
+
                 @include mixins.respond(md) {
                     flex-direction: column;
                     align-items: flex-start;
                     gap: 10px;
                 }
+
+                &.grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-template-rows: 1fr;
+                    grid-column-gap: 0px;
+                    grid-row-gap: 0px;
+
+                    @include mixins.respond(md) {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 10px;
+                    }
+                }
             }
-            &--span{
+
+            &--span {
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
                 margin-top: 12px;
                 gap: 6px;
-                img{
+
+                img {
                     width: 24px;
                     height: 24px;
                 }
-                span{
+
+                span {
                     color: rgba(2, 6, 9, 0.80);
                     font-feature-settings: 'liga' off, 'clig' off;
                     font-family: Inter;
@@ -53,7 +76,8 @@ section.howwework{
                     letter-spacing: 1.12px;
                     text-transform: uppercase;
                 }
-                .howwework__dsc{
+
+                .howwework__dsc {
                     color: #020609;
                     font-family: Inter;
                     font-size: 16px;
@@ -64,12 +88,14 @@ section.howwework{
                     opacity: 0.80;
                     max-width: 328px;
                     width: 100%;
+
                     @include mixins.respond(md) {
                         max-width: 100%;
                     }
                 }
             }
-            &--title{
+
+            &--title {
                 color: #020609;
                 font-family: Inter;
                 font-size: 52px;
@@ -79,74 +105,99 @@ section.howwework{
                 letter-spacing: -2.08px;
                 max-width: 600px;
                 width: 100%;
+
                 @include mixins.respond(md) {
                     font-size: 32px;
                     margin-top: 12px;
                 }
+
+                &.center {
+                    text-align: center;
+                    width: 100%;
+
+                    @include mixins.respond(md) {
+                        text-align: left;
+                    }
+                }
             }
-            &--icon{
+
+            &--icon {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 64px;
                 padding-top: 16px;
                 margin-bottom: auto;
+
                 @include mixins.respond(md) {
                     width: 100%;
                     flex-direction: row;
                     justify-content: space-between;
                 }
-                img:nth-child(1){
+
+                img:nth-child(1) {
                     width: 48px;
                     height: 24px;
                 }
-                img:nth-child(2){
+
+                img:nth-child(2) {
                     width: 196px;
                     height: 16px;
+
                     @include mixins.respond(md) {
                         display: none;
                     }
                 }
             }
-            .howwework__content-body{
+
+            .howwework__content-body {
                 display: flex;
                 flex-direction: row;
                 margin-top: 100px;
                 justify-content: flex-start;
                 gap: 130px;
                 position: relative;
+
                 @include mixins.respond(xl) {
                     justify-content: space-between;
                 }
+
                 @include mixins.respond(md) {
                     margin-top: 40px;
                 }
-                .howwework__img-progress{
+
+                .howwework__img-progress {
                     position: relative;
                     padding-bottom: 40px;
+
                     @include mixins.respond(md) {
                         display: none;
                         margin-top: 80px;
                     }
-                    .howwework__img-box{
+
+                    .howwework__img-box {
                         position: sticky;
                         top: 100px;
+
                         @include mixins.respond(md) {
                             display: none;
                             margin-top: 80px;
                         }
-                        img{
+
+                        img {
                             width: 100%;
                             max-width: 557px;
-    
+
                         }
-                        .howwework__img-text{
+
+                        .howwework__img-text {
                             display: flex;
                             flex-direction: row;
                             justify-content: space-between;
                             align-items: center;
                             margin-top: 10px;
-                            span{
+
+                            span {
                                 color: #020609;
                                 font-family: Inter;
                                 font-size: 12px;
@@ -158,33 +209,35 @@ section.howwework{
                         }
                     }
                 }
-                .howwework__line-progress{
-                    .line-progress__box{
+
+                .howwework__line-progress {
+                    .line-progress__box {
                         display: grid;
                         grid-template-columns: 0.10fr 0.30fr 1fr;
                         grid-template-rows: 1fr;
                         grid-column-gap: 0px;
                         grid-row-gap: 0px;
+
                         @include mixins.respond(md) {
                             display: flex;
                             flex-direction: row;
                             gap: 24px;
-                        
+
                             .line-box__numb {
                                 order: 2;
                                 margin-top: 7px;
                             }
-                        
+
                             .line-box__line {
-                                order: 1; 
+                                order: 1;
                             }
-                        
+
                             .line-box__text {
                                 order: 3;
                             }
                         }
-                        
-                        .line-box__numb{
+
+                        .line-box__numb {
                             color: #020609;
                             font-family: Inter;
                             font-size: 12px;
@@ -195,27 +248,32 @@ section.howwework{
                             display: flex;
                             justify-content: center;
                         }
-                        .line-box__line{
+
+                        .line-box__line {
                             display: flex;
                             flex-direction: column;
                             align-items: center;
                             position: relative;
-                            .line-box__square{
+
+                            .line-box__square {
                                 width: 18px;
                                 height: 18px;
                                 // background: #458781;
                                 background: #F4F6F6;
                                 position: relative;
                             }
-                            .dot1{
+
+                            .dot1 {
                                 background: #458781;
                             }
-                            .line-box__wrap{
+
+                            .line-box__wrap {
                                 position: relative;
                                 height: 100%;
                                 width: 3px;
                                 background-color: #F4F6F6;
-                                .line-box__dash{
+
+                                .line-box__dash {
                                     width: 3px;
                                     // min-height: 220px;
                                     height: 0%;
@@ -227,7 +285,8 @@ section.howwework{
                                 }
                             }
                         }
-                        .line-box__text{
+
+                        .line-box__text {
                             display: flex;
                             flex-direction: column;
                             justify-content: flex-start;
@@ -236,7 +295,8 @@ section.howwework{
                             padding-bottom: 80px;
                             max-width: 335px;
                             width: 100%;
-                            .tagline-box_text{
+
+                            .tagline-box_text {
                                 color: #FFF;
                                 font-family: Inter;
                                 font-size: 12px;
@@ -253,7 +313,8 @@ section.howwework{
                                 align-items: center;
 
                             }
-                            .tagline-title{
+
+                            .tagline-title {
                                 color: #020609;
                                 font-family: Inter;
                                 font-size: 28px;
@@ -262,7 +323,8 @@ section.howwework{
                                 line-height: 120%;
                                 letter-spacing: -1.12px;
                             }
-                            .tagline__dsc{
+
+                            .tagline__dsc {
                                 color: #020609;
                                 font-family: Inter;
                                 font-size: 16px;
@@ -280,7 +342,8 @@ section.howwework{
         }
     }
 }
-section.howwework__img-bottom{
+
+section.howwework__img-bottom {
     width: 100%;
     // height: 538px;
     position: relative;
@@ -294,6 +357,7 @@ section.howwework__img-bottom{
     flex-direction: row;
     gap: 160px;
     color: #FFFFFF;
+
     @include mixins.respond(md) {
         flex-direction: column;
         height: auto;
@@ -301,7 +365,8 @@ section.howwework__img-bottom{
         // padding: 40px 10px 40px 10px;
         background-size: cover;
     }
-    .howwework__img-bottom--box{
+
+    .howwework__img-bottom--box {
         border-inline: 1px solid rgba(255, 255, 255, 0.12);
         display: flex;
         align-items: flex-start;
@@ -315,6 +380,7 @@ section.howwework__img-bottom{
         padding-inline: 40px;
         width: 100%;
         max-width: 1440px;
+
         @include mixins.respond(md) {
             flex-direction: column;
             gap: 20px;
@@ -322,7 +388,8 @@ section.howwework__img-bottom{
             padding-bottom: 40px;
             padding-inline: 20px;
         }
-        .img-bottom__dsc{
+
+        .img-bottom__dsc {
             color: #FFF;
             font-family: Inter;
             font-size: 20px;
@@ -330,17 +397,20 @@ section.howwework__img-bottom{
             font-weight: 500;
             line-height: 160%;
             max-width: 901px;
+
             @include mixins.respond(md) {
                 font-size: 16px;
                 max-width: 100%;
             }
         }
-        .services-page__content--span{
+
+        .services-page__content--span {
             gap: 8px;
             display: flex;
             flex-direction: row;
             align-items: center;
             width: 800px;
+
             @include mixins.respond(md) {
                 width: 100%;
             }
