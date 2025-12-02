@@ -180,4 +180,43 @@ tl.fromTo(".line4", { height: "0%" }, { height: "100%" })
 	setActiveContent(4);
 });
 
+// document.addEventListener("DOMContentLoaded", () => {
+//   const form = document.querySelector("form.contact-form");
+//   if (!form) return;
+
+//   const sendBtn = document.querySelector(".send-btn");
+//   if (!sendBtn) return;
+
+//   const to = "admin@domain.com"; // ganti sesuai kebutuhan
+
+//   const updateMailto = () => {
+//     const subjectInput = form.querySelector('input[name="subject"]');
+//     const messageInput = form.querySelector('textarea[name="message"]');
+//     const nameInput = form.querySelector('input[name="name"]');
+//     const emailInput = form.querySelector('input[name="email"]');
+
+//     const subject = subjectInput?.value.trim() || "Contact from website";
+
+//     let bodyParts = [];
+//     if (nameInput?.value.trim()) bodyParts.push(`Name: ${nameInput.value.trim()}`);
+//     if (emailInput?.value.trim()) bodyParts.push(`Email: ${emailInput.value.trim()}`);
+//     if (messageInput?.value.trim()) bodyParts.push(messageInput.value.trim());
+
+//     const body = encodeURIComponent(bodyParts.join("\n\n"));
+
+//     const mailto = `mailto:${to}`; //?subject=${encodeURIComponent(subject)}&body=${body}
+
+//     sendBtn.setAttribute("href", mailto);
+//   };
+
+//   // update saat user mengetik / mengganti input
+//   form.querySelectorAll("input, textarea").forEach(el => {
+//     el.addEventListener("input", updateMailto);
+//   });
+
+//   // initial set
+//   updateMailto();
+// });
+
+
 
