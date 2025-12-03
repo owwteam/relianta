@@ -18,7 +18,7 @@ section.howwework#contact
             .contact-page
                 .contact-left
                     h2.form_title Send us a Message
-                    form.contact-form(action="mailto:support@relianta.com" method="post" enctype="text/plain")
+                    form.contact-form
                         .input-group
                             input(type="text" placeholder="Name*" name="name")
                             input(type="email" placeholder="E-mail*" name="email")
@@ -26,7 +26,7 @@ section.howwework#contact
 
                         p.contact-note Send us a brief description of your goals and current systems. We’ll reply with proposed next steps—typically a 30minute discovery call and, if useful, access to a sandbox environment.
 
-                        button.send-btn SEND NOW
+                    a(href="#").send-btn SEND NOW
 
 
                 .contact-right
